@@ -1,0 +1,20 @@
+body{
+    background-color: #1F2833;
+    margin: 0 10%;
+}
+.base {
+    font-family: "Courier New", Courier, monospace;
+    color: #C5C6C7;
+}
+.base_about_name h1{
+    color: #66FCF1;
+    font-size: 44px;
+    
+}
+base_about_name{
+    width: 100%;
+}
+.base_skills_logos img {
+    flex-wrap: wrap;
+    width: 130px;
+}

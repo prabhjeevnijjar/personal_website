@@ -1,20 +1,166 @@
+:root {
+    --background-color: #1F2833;
+    --text-color: #d5d5d5;
+    --navbar-color:rgba(0, 0, 0, 0.219);
+    --navbar-color-hovered:rgba(70, 70, 70, 0.219);
+    --selected-text-color: #04b4e0;
+    --image-border: white;
+  }
 body{
-    background-color: #1F2833;
-    margin: 0 10%;
+    background-color: var(--background-color);;
+    margin: 0%;
+    padding: 0%;  
+      
 }
 .base {
     font-family: "Courier New", Courier, monospace;
-    color: #C5C6C7;
+    color: var(--text-color);
 }
-.base_about_name h1{
-    color: #66FCF1;
-    font-size: 44px;
-    
-}
-base_about_name{
+.base_nav {
+    background-color: var(--navbar-color);
     width: 100%;
+    height: 8%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+.base_nav ul {
+    list-style-type: none;
+}
+.base_nav_leftside {
+    display: flex;
+    padding-top: 5px;
+    justify-content: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    vertical-align: middle;
+}
+.base_nav_leftside li {
+    margin-right: 26px;
+    vertical-align: middle;
+    height: 100%;
+
+}
+.base_nav_leftside li:hover{
+    cursor: pointer;
+    background-color: var(--navbar-color-hovered);
+}
+.base_nav_rightside li {
+    margin-right: 26px;
+}
+.base_nav_rightside li:hover{
+    cursor: pointer;
+    background-color: var(--navbar-color-hovered);
+}
+.toggle_button {
+    position: absolute;
+    display: none;
+    flex: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 25px;
+    top: 0.75rem;
+    right: 1rem;
+}
+.toggle_button_bar {
+    background-color: var(--image-border);
+    height: 3px;
+    width: 100%;
+    border-radius: 10px;
+}
+.base_about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+.base_about_name p {
+    font-size: 1.6rem;
+}
+.base_about_desc p {
+    font-size: 1.4rem;
+    margin-top: -10px;
+}
+.base_about_image img {
+    margin-top: 22px;
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    border: 3px solid var(--image-border);
+    z-index: 1;
+}
+.base_about_socials img{
+    width: 7rem;
+}
+.base_about_socials img:hover{
+    cursor: pointer;
 }
 .base_skills_logos img {
     flex-wrap: wrap;
-    width: 130px;
+    width: 100px;
+}
+.base_aboutme  {
+    margin: 4%;
+}
+.base_aboutme_title h2 {
+    letter-spacing: 2px;
+}
+.base_aboutme_info {
+    display: flex;
+    flex: wrap;
+    flex-direction: row;
+}
+.base_aboutme_info .title {
+    color: var(--selected-text-color);
+    margin-right: 3px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+.base_aboutme_info ul {
+    text-decoration: none;
+    list-style-type: none;
+}
+.base_aboutme_info ul li {
+    margin: 0.5rem;
+}
+@media (max-width: 768px) {
+    .toggle_button {
+        display: flex
+    }
+    .base_nav_leftside {
+        display: none;
+        justify-content: center;
+        flex-direction: column;
+        /* margin-top: 3.5rem; */
+    }
+    .base_nav_leftside li {
+        margin-right: 26px;
+        text-align: center;
+        padding: 1rem 0 1rem 0;
+    }
+    .base_nav_rightside li {
+        margin-right: 26px;
+        text-align: center;
+        padding: 1rem;
+        vertical-align: middle;
+        /* display: none; */
+    }
+    .base_nav {
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    .base_nav ul {
+        width: 80%;
+    }
+    .show {
+        display: flex;        
+    }
+    .base_aboutme_info {
+        flex-direction: column;
+    }
+
+
 }

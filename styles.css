@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700&display=swap');
 :root {
     --background-color: #1F2833;
     --text-color: #d5d5d5;
@@ -12,7 +13,7 @@ body{
     padding: 0%;  
 }
 .base {
-    font-family: "Courier New", Courier, monospace;
+    font-family: 'Montserrat', sans-serif;
     color: var(--text-color);
 }
 .base_nav {
@@ -95,7 +96,9 @@ body{
 }
 .base_about_socials img{
     width: 7rem;
+    /* height: 2.3rem; */
 }
+
 .base_about_socials img:hover{
     cursor: pointer;
 }
@@ -118,7 +121,13 @@ body{
 }
 .base_aboutme_info_left {
     display: inline-block;
-    max-width: 60%;
+    max-width: 80%;
+}
+.global-paragraph  {
+    display: block;
+    line-height: 1.5rem;
+    word-spacing: 0.1rem;
+    font-size: 1.1rem;
 }
 .base_aboutme_info ul {
     text-decoration: none;
@@ -150,6 +159,9 @@ body{
 .nodejs-logo {
     width: 140px;
 }
+.base_work {
+    margin: 4%;
+}
 .base_contact {
     margin: 4%;
 }
@@ -165,7 +177,7 @@ body{
 .base_contact_left {
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
 }
@@ -206,7 +218,7 @@ body{
     flex-wrap: wrap;
 }
 .base_contact_right-form-left h2 {
-    letter-spacing: 1px;
+    /* letter-spacing: 1px; */
     color: var(--selected-text-color);
     margin: 1rem;
 }
@@ -299,4 +311,51 @@ body{
     .nodejs-logo {
         width: 100px;
     }
+    .timeline-sm-item .timeline-sm {
+        margin-left: 2rem;
+    }
 }
+/* work exp timeline code */
+  .tab-content {
+    padding: 20px 0 0 0;
+  }
+
+  .timeline-sm {
+    padding-left: 110px;
+  }
+  .timeline-sm .timeline-sm-item {
+    position: relative;
+    padding-bottom: 20px;
+    padding-left: 40px;
+    border-left: 2px solid var(--text-color);
+    margin-left: 8rem;
+  }
+  .timeline-sm .timeline-sm-item:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 3px;
+    left: -7px;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: #fff;
+    border: 2px solid #1abc9c;
+  }
+  .timeline-sm .timeline-sm-item .timeline-sm-date {
+    position: absolute;
+    left: -185px;
+  } 
+  @media (max-width: 420px) {
+    .timeline-sm {
+      padding-left: 0;
+    }
+    .timeline-sm .timeline-sm-date {
+      position: relative !important;
+      display: block;
+      left: 0 !important;
+      margin-bottom: 10px;
+      margin-left: 12rem;
+    }
+  }
+/* copied end */

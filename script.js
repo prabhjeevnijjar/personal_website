@@ -13,28 +13,28 @@ function onClickShowMore(event) {
     const showMoreButton = document.getElementsByClassName('showmore')[0]
     const actualData = document.getElementsByClassName('work_data')[0];
     const arrowUpDown = document.getElementsByClassName('arrow')[0];
-    showMoreButton.addEventListener('click',() => {
+    console.log("emocmroj",arrowUpDown.classList)
+    showMoreButton.addEventListener('click',(event) => {
         if (actualData.style.display === "none") {
             actualData.style.display = "block";
-            if(arrowUpDown.contains('down')) {
-                arrowUpDown.remove('down')
-                arrowUpDown.add('up')
-            } else {
-                arrowUpDown.remove('up')
-                arrowUpDown.add('down')
-            }
-            event.stopPropagation();
+           
+            // event.stopPropagation();
           } else {
             actualData.style.display = "none";
-            if(arrowUpDown.contains('down')) {
-                arrowUpDown.remove('down')
-                arrowUpDown.add('up')
-            } else {
-                arrowUpDown.remove('up')
-                arrowUpDown.add('down')
-            }
-            event.stopPropagation();
+            
+            // event.stopPropagation();
           }
+
+          if(arrowUpDown.classList.contains("down")) {
+            console.log("down")
+            console.log("emocmroj",arrowUpDown.classList)
+
+            arrowUpDown.classList.remove('down')
+            arrowUpDown.classList.add('up')
+        } else {
+            arrowUpDown.remove('up')
+            arrowUpDown.classList.add('down')
+        }
     })
     }
 onClickHamburger();

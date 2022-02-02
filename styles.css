@@ -1,10 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700&display=swap');
-:root {
-    --background-color: #1F2833;
+/* :root {
+    --background-color: #171c24;
     --text-color: #d5d5d5;
     --navbar-color:rgba(0, 0, 0, 0.219);
     --navbar-color-hovered:rgba(70, 70, 70, 0.219);
     --selected-text-color: #04b4e0;
+    --image-border: rgba(97, 97, 97, 0.603);
+  } */
+  :root {
+    --background-color: white;
+    --text-color: rgb(63, 63, 63);
+    --navbar-color:rgba(0, 0, 0, 0.219);
+    --navbar-color-hovered:rgba(70, 70, 70, 0.219);
+    --selected-text-color: #0086a7;
     --image-border: rgba(97, 97, 97, 0.603);
   }
 body{

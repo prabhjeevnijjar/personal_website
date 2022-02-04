@@ -7,6 +7,7 @@
     --selected-text-color: #04b4e0;
     --image-border: rgba(97, 97, 97, 0.603);
   } */
+ 
   :root {
     --background-color: white;
     --text-color: rgb(63, 63, 63);
@@ -14,18 +15,27 @@
     --navbar-color-hovered:rgba(70, 70, 70, 0.219);
     --selected-text-color: #0086a7;
     --image-border: rgba(97, 97, 97, 0.603);
+    --timeline-color: rgb(136 136 136);
   }
+  [data-theme="dark"] {
+    --background-color: #171c24;
+    --text-color: #d5d5d5;
+    --navbar-color:rgba(0, 0, 0, 0.219);
+    --navbar-color-hovered:rgba(70, 70, 70, 0.219);
+    --selected-text-color: #04b4e0;
+    --image-border: rgba(97, 97, 97, 0.603);
+}
 body{
     background-color: var(--background-color);;
     margin: 0%;
-    padding: 0%;  
+    padding: 0% 1% 0% 1%;  
 }
 .base {
     font-family: 'Montserrat', sans-serif;
     color: var(--text-color);
 }
 .base_nav {
-    background-color: var(--navbar-color);
+    /* background-color: var(--navbar-color); */
     width: 100%;
     height: 8%;
     display: flex;
@@ -48,18 +58,19 @@ body{
     margin-right: 26px;
     vertical-align: middle;
     height: 100%;
+    font-size: 1.2rem;
 
 }
 .base_nav_leftside li:hover{
     cursor: pointer;
-    background-color: var(--navbar-color-hovered);
+    /* background-color: var(--navbar-color-hovered); */
 }
 .base_nav_rightside li {
     margin-right: 26px;
 }
 .base_nav_rightside li:hover{
     cursor: pointer;
-    background-color: var(--navbar-color-hovered);
+    /* background-color: var(--navbar-color-hovered); */
 }
 .toggle_button {
     position: absolute;
@@ -88,6 +99,7 @@ body{
 .base_about_name p {
     font-size: 1.6rem;
     letter-spacing: 0.1rem;
+    text-align: center;
 }
 .base_about_desc p {
     font-size: 1.4rem;
@@ -216,7 +228,7 @@ body{
     width: 50px;
 }
 .contact_icon h4 {
-    font-weight: 300;
+    font-weight: 500;
     margin-top: 2.5rem;
     letter-spacing: 1px;;
 }
@@ -229,7 +241,7 @@ body{
     padding: 2rem;
     height: 8rem;
     width: 14rem;
-    border: 3px solid var(--image-border);
+    /* border: 3px solid var(--image-border); */
     border-radius: 5px;
 }
 .base_contact_data {
@@ -289,7 +301,7 @@ body{
 .base_contact_right-form-right, input:focus, textarea {
     outline: none !important;
 }
-.mapouter {
+/* .mapouter {
     position: relative;
     text-align: right;
     height: 194px;
@@ -304,8 +316,83 @@ body{
     background: none !important;
     height: 100%;
     width: 100%;
+} */
+/*Simple css to style it like a toggle switch*/
+.theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .theme-switch {
+    display: inline-block;
+    height: 20px;
+    position: relative;
+    width: 45px;
+  }
+  
+  .theme-switch input {
+    display:none;
+  }
+  
+  .slider {
+    background-color: black;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    background-color: grey;
+    bottom: 2.55px;
+    content: "";
+    height: 14px;
+    left: 3px;
+    position: absolute;
+    transition: .4s;
+    width: 15px;
+  }
+  .slider::after{
+    background-color: black;
+
+  }
+  input:checked + .slider {
+    background-color: white;
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(24px);
+  }
+  
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+  
+  
+
+.base_resume_button {
+   background: transparent;
+   padding: 0.75rem 1rem 0.75rem 1rem;
+    min-width: 9rem;
+    min-height: 2.5rem;
+    color: var(--text-color);
+    border: 2px solid var(--image-border);
+    border-radius: 4px;
+    font-size: 1.4rem;
 }
 @media (max-width: 768px) {
+    .base_resume_button {
+        margin-left: 30%;
+        margin-top:50px;
+        margin-bottom: 50px;
+    }
     .toggle_button {
         display: flex;
     }
@@ -354,7 +441,7 @@ body{
       }
 }
 /* work exp timeline code */
-  .arrow {
+  /* .arrow {
     border: solid var(--text-color);
     border-width: 0 3px 3px 0;
     display: inline-block;
@@ -367,7 +454,7 @@ body{
   .up {
   transform: rotate(-135deg);
   -webkit-transform: rotate(-135deg);
-}
+} */
   .showmoredata {
     display: block;
   }
@@ -392,7 +479,7 @@ list-style-type: none;  }
     position: relative;
     padding-bottom: 20px;
     padding-left: 40px;
-    border-left: 2px solid var(--text-color);
+    border-left: 2px solid var(--timeline-color);
     margin-left: 8rem;
   }
   .timeline-sm .timeline-sm-item:after {
@@ -409,16 +496,21 @@ list-style-type: none;  }
   }
   .timeline-sm .timeline-sm-item .timeline-sm-date {
     position: absolute;
-    left: -185px;
+    left: -202px;
+    font-size: 1.1rem;
   } 
   .timeline-sm-date_color {
      color: var(--selected-text-color);
      letter-spacing: 0.5px;
+     /* font-size: 1.4rem; */
     }
   @media (max-width: 420px) {
     .timeline-sm {
       padding-left: 0;
       margin-left: -98px;
+    }
+ .timeline-sm-date_color {
+    font-size: 1.4rem;
     }
     .timeline-sm .timeline-sm-date {
       position: relative !important;

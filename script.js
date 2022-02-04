@@ -37,5 +37,23 @@ function onClickShowMore(event) {
         }
     })
     }
+//changing theme on click
+const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+console.log("classes:",toggleSwitch)
+function switchTheme(e) {
+    console.log("hello");
+    console.log("classes:",toggleSwitch)
+
+    if (e.target.checked) {
+        console.log("checked");
+
+        document.documentElement.setAttribute('data-theme', 'dark');
+    }
+    else {
+        document.documentElement.setAttribute('data-theme', 'light');
+    }    
+}
+toggleSwitch.addEventListener('change', switchTheme);
+    
 onClickHamburger();
 onClickShowMore();

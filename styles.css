@@ -25,6 +25,7 @@
     --selected-text-color: #04b4e0;
     --image-border: rgba(97, 97, 97, 0.603);
 }
+
 body{
     background-color: var(--background-color);;
     margin: 0%;
@@ -72,6 +73,22 @@ body{
     cursor: pointer;
     /* background-color: var(--navbar-color-hovered); */
 }
+.base_nav_leftside li a {
+    color: var(--text-color);
+    bottom: 1px;
+    text-decoration: none;
+}
+
+.base_nav_leftside li a:visited {
+    color: var(--text-color);
+}
+.base_resume button a {
+    color: var(--text-color);
+    bottom: 1px;
+}
+.base_resume button a:visited {
+    color: var(--text-color);
+}
 .toggle_button {
     position: absolute;
     display: none;
@@ -114,11 +131,15 @@ body{
     border: 3px solid var(--image-border);
     z-index: 1;
 }
-.base_about_socials img{
+.linkedin-logo img{
     width: 7rem;
     /* height: 2.3rem; */
+    padding: 7px;
 }
+.github-logo img{
+    width: 7rem;
 
+}
 .base_about_socials img:hover{
     cursor: pointer;
 }
@@ -503,6 +524,19 @@ list-style-type: none;  }
      color: var(--selected-text-color);
      letter-spacing: 0.5px;
      /* font-size: 1.4rem; */
+    }
+    .bottom_bar {
+        /* position: fixed; */
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        bottom: 0;
+        width: 100%;
+        overflow: hidden;
+
+    }
+    .linkedin-logo{
+        margin-top:2px;
     }
   @media (max-width: 420px) {
     .timeline-sm {
